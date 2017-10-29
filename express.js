@@ -55,9 +55,9 @@ var funcForUserList = function(req,res){
     var userPwd = req.query.pwd;
     var resText = "";
     if(!userId){
-        res.send = "유저아이디를 입력해주세요" ;
+        res.send = ( "유저아이디를 입력해주세요" );
     }else if(!userPwd){
-        resText = "비밀번호를 입력해주세요.";
+        res.send = ( "비밀번호를 입력해주세요.");
     }else{   
         var sql =  'select * from user_info where userId=?';
         var values = [userId];
